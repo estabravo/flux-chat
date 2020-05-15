@@ -57,6 +57,25 @@
 
 </div>
 
+    <!-- connecting our database -->
+    <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.4/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAoZ1EF2_XHoVmd2hh3cSN34_cMgcq1wUc",
+          authDomain: "udemy-modern-javascript-817cf.firebaseapp.com",
+          databaseURL: "https://udemy-modern-javascript-817cf.firebaseio.com",
+          projectId: "udemy-modern-javascript-817cf",
+          storageBucket: "udemy-modern-javascript-817cf.appspot.com",
+          messagingSenderId: "744081467459",
+          appId: "1:744081467459:web:28965dec7a3940bcb14cf6",
+          measurementId: "G-BB6TPMVG4Z"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
 
     <script src="scripts/chat.js"></script>
     <script src="scripts/ui.js"></script>
