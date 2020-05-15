@@ -4,3 +4,9 @@
 body{
     background-color: black;
 }
+.btn{
+    background: mediumpurple;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
