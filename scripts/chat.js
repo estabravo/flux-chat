@@ -20,8 +20,16 @@ class Chatroom {
             room: this.room,
             created_at: firebase.firestore.Timestamp.fromDate(now) // passing our timestamp
         }; // here's our 'chats' object
+        // this will save the chat document to the database 
+        const response = await this.chats.add(chat);
+        // await used because 'async' above is returning a promise
+        // this.chats is referencing the chats collection from our constructor
+        // .add is going to take the 'chat' object we just created
+        // the response we're awaiting will be stored in 'response' 
+        return response; 
     }
 }
+
 
 // testing new Chatroom instance (passing through 'room' and 'username')
 const chatroom = new Chatroom('general', 'bravo');
