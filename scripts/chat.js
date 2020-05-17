@@ -12,3 +12,6 @@ class Chatroom {
     }
 }
 
+// testing new Chatroom instance (passing through 'room' and 'username')
+const chatroom = new Chatroom('general', 'bravo');
+console.log(chatroom);
