@@ -10,6 +10,17 @@ class Chatroom {
         this.username = username;
         this.chats = db.collection('chats');
     }
+    // creating method to add new chat documents (async - will take some time)
+    async addChat(message){
+        // format a chat object (since we're passing object data)
+        const now = new Date(); //access when the user has submitted the chat
+        const chat = {
+            message, //shortend with ES6     
+            username: this.username,
+            room: this.room,
+            created_at: firebase.firestore.Timestamp.fromDate(now) // passing our timestamp
+        }; // here's our 'chats' object
+    }
 }
 
 // testing new Chatroom instance (passing through 'room' and 'username')
