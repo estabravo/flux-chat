@@ -33,4 +33,10 @@ class Chatroom {
 
 // testing new Chatroom instance (passing through 'room' and 'username')
 const chatroom = new Chatroom('general', 'bravo');
-console.log(chatroom);
+// console.log(chatroom);
+
+// testing .addChat method
+    // remember, this method returns a promise -> .then 
+chatroom.addChat('this is a test message!!!')
+    .then((data) => console.log(data, 'chat added'))
+    .catch(err => console.log(err));
