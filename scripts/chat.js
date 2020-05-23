@@ -28,6 +28,11 @@ class Chatroom {
         // the response we're awaiting will be stored in 'response' 
         return response; 
     }
+    getChat(){
+        this.chats.onSnapshot(snapshots => {
+            
+        })
+    }
 }
 
 
