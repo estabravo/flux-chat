@@ -29,9 +29,10 @@ class Chatroom {
         return response; 
     }
     getChat(){
-        this.chats.onSnapshot(snapshots => {
-            
-        })
+        this.chats
+            .onSnapshot(snapshots => {
+             
+        });
     }
 }
 
