@@ -28,14 +28,15 @@ class Chatroom {
         // the response we're awaiting will be stored in 'response' 
         return response; 
     }
-    getChat(){
+    getChat(callback){
         this.chats
             .onSnapshot(snapshots => {
              snapshots.docChanges().forEach(change => {
                  if(change.type === 'added'){
-                     
+                     // update the ui
+                     callback(change.doc.data());
                  }
-             })
+             });
         });
     }
 }
@@ -47,6 +48,10 @@ const chatroom = new Chatroom('general', 'bravo');
 
 // testing .addChat method
     // remember, this method returns a promise -> .then 
-chatroom.addChat('this is a test message!!!')
-    .then((data) => console.log(data, 'chat added'))
-    .catch(err => console.log(err));
+// chatroom.addChat('this is a test message!!!')
+//     .then((data) => console.log(data, 'chat added'))
+//     .catch(err => console.log(err));
+
+chatroom.getChats((data) => {
+    console.log(data);
+});
