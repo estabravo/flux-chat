@@ -31,7 +31,9 @@ class Chatroom {
     getChat(){
         this.chats
             .onSnapshot(snapshots => {
-             snapshots.docChanges()
+             snapshots.docChanges().forEach(change => {
+                 
+             })
         });
     }
 }
