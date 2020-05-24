@@ -28,7 +28,7 @@ class Chatroom {
         // the response we're awaiting will be stored in 'response' 
         return response; 
     }
-    getChat(callback){
+    getChats(callback){
         this.chats
             .onSnapshot(snapshots => {
              snapshots.docChanges().forEach(change => {
