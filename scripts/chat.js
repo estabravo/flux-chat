@@ -31,7 +31,7 @@ class Chatroom {
     getChat(){
         this.chats
             .onSnapshot(snapshots => {
-             
+             snapshots.docChanges()
         });
     }
 }
