@@ -32,7 +32,9 @@ class Chatroom {
         this.chats
             .onSnapshot(snapshots => {
              snapshots.docChanges().forEach(change => {
-                 
+                 if(change.type === 'added'){
+                     
+                 }
              })
         });
     }
