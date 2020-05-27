@@ -31,6 +31,7 @@ class Chatroom {
     getChats(callback){
         this.chats
             .where('room', '==', this.room)
+            .orderBy('created_at')
             .onSnapshot(snapshots => {
              snapshots.docChanges().forEach(change => {
                  if(change.type === 'added'){
@@ -44,7 +45,7 @@ class Chatroom {
 
 
 // testing new Chatroom instance (passing through 'room' and 'username')
-const chatroom = new Chatroom('gaming', 'bravo');
+const chatroom = new Chatroom('general', 'bravo');
 // console.log(chatroom);
 
 // testing .addChat method
