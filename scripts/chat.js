@@ -44,6 +44,10 @@ class Chatroom {
     updateName(username){
         this.username = username;
     }
+    updateRoom(room){
+        this.room = room;
+        console.log('room updated');
+    }
 }
 
 
@@ -60,3 +64,5 @@ const chatroom = new Chatroom('general', 'bravo');
 chatroom.getChats((data) => {
     console.log(data);
 });
+
+chatroom.updateRoom('gaming');
