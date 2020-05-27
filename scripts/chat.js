@@ -41,6 +41,9 @@ class Chatroom {
              });
         });
     }
+    updateName(username){
+        this.username = username;
+    }
 }
 
 
