@@ -9,6 +9,7 @@ class Chatroom {
         this.room = room;
         this.username = username;
         this.chats = db.collection('chats');
+        this.unsub;
     }
     // creating method to add new chat documents (async - will take some time)
     async addChat(message){
@@ -29,7 +30,7 @@ class Chatroom {
         return response; 
     }
     getChats(callback){
-        this.chats
+        this.unsub = this.chats
             .where('room', '==', this.room)
             .orderBy('created_at')
             .onSnapshot(snapshots => {
@@ -47,6 +48,9 @@ class Chatroom {
     updateRoom(room){
         this.room = room;
         console.log('room updated');
+        if(this.unsub){
+            this.unsub();
+        }
     }
 }
 
