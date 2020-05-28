@@ -54,26 +54,11 @@ class Chatroom {
     }
 }
 
-
-// testing new Chatroom instance (passing through 'room' and 'username')
-const chatroom = new Chatroom('general', 'bravo');
-// console.log(chatroom);
-
-// testing .addChat method
-    // remember, this method returns a promise -> .then 
-// chatroom.addChat('this is a test message!!!')
-//     .then((data) => console.log(data, 'chat added'))
-//     .catch(err => console.log(err));
-
-chatroom.getChats((data) => {
-    console.log(data);
-});
-
-setTimeout(() => {
-    chatroom.updateRoom('gaming');
-    chatroom.updateName('lavahey');
-    chatroom.getChats((data) => {
-    console.log(data);
-});
- chatroom.addChat('hello');
-}, 3000);
+// setTimeout(() => {
+//     chatroom.updateRoom('gaming');
+//     chatroom.updateName('lavahey');
+//     chatroom.getChats((data) => {
+//     console.log(data);
+// });
+//  chatroom.addChat('hello');
+// }, 3000);
