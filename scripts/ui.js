@@ -12,6 +12,8 @@ class ChatUI {
                 <span class="message">${data.message}</span>  
                 <div class="time">${data.created_at.toDate()}</div>
             </li>
-        `
+        `;
+
+        this.list.innerHTML += html;
     }
 }
