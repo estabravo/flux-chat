@@ -23,6 +23,7 @@ newNameForm.addEventListener('submit', e => {
     newNameForm.reset();
     // show then hide the update message
     updateMssge.innerText = `Your name was updated to ${newName}`;
+    setTimeout(() => updateMssge.innerText = '', 3000);
 })
 
 // class instances
