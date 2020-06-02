@@ -19,3 +19,10 @@ h1{
 .my-2{
     color: whitesmoke;
 }
+.username{
+    font-weight: bold;
+}
+.time{
+    font-size: 0.7em;
+    color: #999;
+}
