@@ -24,9 +24,11 @@ h1{
 }
 .time{
     font-size: 0.7em;
-    color: #999;
+    color: rgb(162, 162, 162);
 }
 .update-mssg{
+    color: lightgrey;
     text-align: center;
     margin: 20px auto;
+    transition: opacity 6s;
 }

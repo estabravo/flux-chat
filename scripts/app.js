@@ -23,7 +23,13 @@ newNameForm.addEventListener('submit', e => {
     newNameForm.reset();
     // show then hide the update message
     updateMssge.innerText = `Your name was updated to ${newName}`;
-    setTimeout(() => updateMssge.innerText = '', 3000);
+    updateMssge.style.opacity = '0';
+    setTimeout(() => {
+        updateMssge.innerText = '';
+        updateMssge.style.opacity = '1';
+
+    }, 4000);
+    
 });
 
 // check local storage for a name
