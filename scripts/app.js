@@ -16,6 +16,8 @@ newChatForm.addEventListener('submit', e => {
 newNameForm.addEventListener('submit', e => {
     e.preventDefault();
     const newName = newNameForm.name.value.trim()
+    // update name via chatroom
+    chatroom.updateName(newName);
 })
 
 // class instances
