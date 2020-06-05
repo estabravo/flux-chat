@@ -36,7 +36,7 @@ newNameForm.addEventListener('submit', e => {
 // update the chat room
 rooms.addEventListener('click', e => {
     if(e.target.tagName === 'BUTTON'){
-        console.log(e);
+        chatUI.clear();
     }
 });
 
