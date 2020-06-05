@@ -3,6 +3,7 @@ const chatList  = document.querySelector('.chat-list');
 const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMssge = document.querySelector('.update-mssg');
+const rooms = document.querySelector('.chat-rooms');
 
 // add a new chat
 newChatForm.addEventListener('submit', e => {
@@ -30,6 +31,13 @@ newNameForm.addEventListener('submit', e => {
 
     }, 4000);
     
+});
+
+// update the chat room
+rooms.addEventListener('click', e => {
+    if(e.target.tagName === 'BUTTON'){
+        console.log(e);
+    }
 });
 
 // check local storage for a name
